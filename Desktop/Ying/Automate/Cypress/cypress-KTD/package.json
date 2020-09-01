@@ -1,0 +1,28 @@
+{
+    "devDependencies": {
+        "cypress": "^4.11.0",
+        "cypress-cucumber-preprocessor": "^2.5.0",
+        "cypress-file-upload": "^4.0.7",
+        "cypress-form-data-with-file-upload": "^1.0.0",
+        "cypress-multi-reporters": "^1.4.0",
+        "cypress-upload-file-post-form": "^1.1.0",
+        "cypress-xpath": "^1.6.0",
+        "form-data": "^3.0.0",
+        "mocha": "^8.0.1",
+        "mocha-allure-reporter": "^1.4.0",
+        "mochawesome": "^6.1.1",
+        "mochawesome-merge": "^4.1.0",
+        "mochawesome-report-generator": "^5.1.0"
+    },
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": true
+    },
+    "dependencies": {
+        "@types/chai": "^4.2.8",
+        "@types/mocha": "^7.0.1"
+    },
+    "scripts": {
+        "test:allure": "cypress run -b chrome -r mocha-allure-reporter [-s specified test cases to execute] ",
+        "report": "allure generate allure-results --clean -o allure-report && allure open allure-report"
+    }
+}
